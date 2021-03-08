@@ -4,6 +4,7 @@ package com.tts.CalendarDemo.service;
 import com.tts.CalendarDemo.model.Event;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -16,4 +17,5 @@ public interface EventService {
     void save(Event event);
     void deleteById(long id);
     List<Event> findByCreatedAtAndOrCategory(Date createdAt, String category);
+    List<Event> findByEventDate(LocalDate eventDate);
 }

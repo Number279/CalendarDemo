@@ -22,10 +22,15 @@
                 </a>
                 <div class="card-body">
                     <div class="card-title">
-                        <h4 th:text="${event.getCreatedAt()}"></h4>
-                        <h4 th:text="${event.name}"></h4>
-                        <h4 th:text="${event.category}"></h4>
-                        <h4 th:text="${event.description}"></h4>
+<!--                        <h4 th:text="${event.getCreatedAt()}"></h4>-->
+                        <h4>Party Name:</h4>
+                        <h5 th:text="${event.name}"></h5>
+                        <br />
+                        <h4>Event Category:</h4>
+                        <h5 th:text="${event.category}"></h5>
+                        <br />
+                        <h4>Event Description:</h4>
+                        <h5 th:text="${event.description}"></h5>
                     </div>
                 </div>
             </div>

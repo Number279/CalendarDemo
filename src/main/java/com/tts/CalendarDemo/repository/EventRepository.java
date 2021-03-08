@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +15,7 @@ public interface EventRepository extends CrudRepository<Event, Long> {
     Event findById(long id);
     List<Event> findByCategory(String category);
     List<Event> findByCreatedAt(Date createdAt);
+    List<Event> findByEventDate(LocalDate eventDate);
     List<Event> findByCreatedAtAndCategory(Date createdAt, String category);
 
 //    @Query("SELECT DISTINCT e.category FROM Event e")
