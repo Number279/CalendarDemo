@@ -29,7 +29,7 @@ public class EventController {
     @RequestMapping(value = "/event", method = {RequestMethod.POST, RequestMethod.PUT})
     public String createOrUpdate(@Valid Event event){
         eventService.save(event);
-        return "redirect:/event/" + event.getId();
+        return "redirect:/";
     }
 
     @GetMapping("/addEvent")
