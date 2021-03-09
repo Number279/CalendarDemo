@@ -11,8 +11,8 @@
             <p>Calendar Demo Test</p>
             <a href="/addEvent">Add Event</a>
             <br />
-            <a href="/admin">Admin Page</a>
-<!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
+            <a href="/">Home Page</a>
+            <!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
         </div>
     </div>
 
@@ -20,29 +20,26 @@
         <div class="row">
             <div class="card col-md-3 small-product-card" th:each="event:${events}">
                 <a th:href="@{/event/{id}(id=${event.getId()})}">
-<!--                    <img th:alt="${event.name}"/>-->
-<!--                                                                          th:src="@{${product.image}}" class="card-img width"/>-->
+                    <!--                    <img th:alt="${event.name}"/>-->
+                    <!--                                                                          th:src="@{${product.image}}" class="card-img width"/>-->
                 </a>
                 <div class="card-body">
                     <div class="card-title">
-<!--                        <h4 th:text="${event.getCreatedAt()}"></h4>-->
-                        <h4 th:unless="${event.showName}">Party Name:</h4>
-                        <h5 th:unless="${event.showName}" th:text="${event.name}"></h5>
+                        <!--                        <h4 th:text="${event.getCreatedAt()}"></h4>-->
+                        <h4 >Party Name:</h4>
+                        <h5 th:text="${event.name}"></h5>
                         <br />
                         <h4>Event Category:</h4>
                         <h5 th:text="${event.category}"></h5>
                         <br />
-                        <h4 th:unless="${event.showName}">Event Description:</h4>
-                        <h5 th:unless="${event.showName}" th:text="${event.description}"></h5>
+                        <h4>Event Description:</h4>
+                        <h5 th:text="${event.description}"></h5>
                         <br />
-<!--                        <h4>Event Date:</h4>-->
-<!--                        <h5 th:text="${event.eventDate}"></h5>-->
-<!--                        <br />-->
                         <h4>Event Date:</h4>
                         <h5 th:text="${event.dateTime}"></h5>
                         <br />
-<!--                        <h4>Start Time:</h4>-->
-<!--                        <h5 th:text="${event.startTime}"></h5>-->
+                        <h4>Booking Date:</h4>
+                        <h5 th:text="${event.createdAt}"></h5>
                     </div>
                 </div>
             </div>
