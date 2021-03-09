@@ -24,14 +24,14 @@
                 <div class="card-body">
                     <div class="card-title">
 <!--                        <h4 th:text="${event.getCreatedAt()}"></h4>-->
-                        <h4>Party Name:</h4>
-                        <h5 th:text="${event.name}"></h5>
+                        <h4 th:unless="${event.showName}">Party Name:</h4>
+                        <h5 th:unless="${event.showName}" th:text="${event.name}"></h5>
                         <br />
                         <h4>Event Category:</h4>
                         <h5 th:text="${event.category}"></h5>
                         <br />
-                        <h4>Event Description:</h4>
-                        <h5 th:text="${event.description}"></h5>
+                        <h4 th:unless="${event.showName}">Event Description:</h4>
+                        <h5 th:unless="${event.showName}" th:text="${event.description}"></h5>
                         <br />
 <!--                        <h4>Event Date:</h4>-->
 <!--                        <h5 th:text="${event.eventDate}"></h5>-->
