@@ -9,6 +9,7 @@
         <div class="container">
             <h1 class="display-3">Calendar Demo</h1>
             <p>Calendar Demo Test</p>
+            <a href="/addEvent">Add Event</a>
 <!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
         </div>
     </div>
@@ -32,8 +33,14 @@
                         <h4>Event Description:</h4>
                         <h5 th:text="${event.description}"></h5>
                         <br />
-                        <h4>Event Date</h4>
-                        <h5 th:text="${event.eventDate}"></h5>
+<!--                        <h4>Event Date:</h4>-->
+<!--                        <h5 th:text="${event.eventDate}"></h5>-->
+<!--                        <br />-->
+                        <h4>Event Date:</h4>
+                        <h5 th:text="${event.dateTime}"></h5>
+                        <br />
+<!--                        <h4>Start Time:</h4>-->
+<!--                        <h5 th:text="${event.startTime}"></h5>-->
                     </div>
                 </div>
             </div>

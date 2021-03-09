@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 
 @Controller
 public class EventController {
@@ -27,10 +28,20 @@ public class EventController {
     // TODO: Either implement admin controls or remote these methods
 
     @RequestMapping(value = "/event", method = {RequestMethod.POST, RequestMethod.PUT})
-    public String createOrUpdate(@Valid Event event){
+    public String createOrUpdate(final Event event){
+        if(event.getDateTime() == null) {
+            event.setDateTime(LocalDateTime.now());
+        }
         eventService.save(event);
         return "redirect:/";
     }
+
+//    @GetMapping("/addEvent")
+//    public String addEvent(Model model){
+//        Event newEvent = new Event();
+//        model.addAttribute("event", newEvent);
+//        return "addEvent";
+//    }
 
     @GetMapping("/addEvent")
     public String addEvent(Model model){

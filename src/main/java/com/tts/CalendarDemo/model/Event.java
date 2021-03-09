@@ -30,10 +30,29 @@ public class Event {
     private String name;
     private String category;
     private Boolean showName;
-    private String startTime;
+//    private String startTime;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    private LocalDate eventDate;
+//    @DateTimeFormat(pattern="yyyy-MM-dd")
+//    private LocalDate eventDate;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    private LocalDateTime dateTime;
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @CreationTimestamp
     private Date createdAt;

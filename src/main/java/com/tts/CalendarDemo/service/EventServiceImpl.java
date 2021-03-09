@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -52,9 +53,15 @@ public class EventServiceImpl implements EventService{
         else return eventRepository.findByCreatedAtAndCategory(createdAt, category);
     }
 
+//    @Override
+//    public List<Event> findByEventDate(LocalDate eventDate){
+//        if(eventDate == null) return eventRepository.findAll();
+//        else return eventRepository.findByEventDate(eventDate);
+//    }
+
     @Override
-    public List<Event> findByEventDate(LocalDate eventDate){
-        if(eventDate == null) return eventRepository.findAll();
-        else return eventRepository.findByEventDate(eventDate);
+    public List<Event> findByDateTime(LocalDateTime dateTime){
+        if(dateTime == null) return eventRepository.findAll();
+        else return eventRepository.findByDateTime(dateTime);
     }
 }
