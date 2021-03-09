@@ -30,6 +30,7 @@ public class Event {
     private String name;
     private String category;
     private Boolean showName;
+    private String startTime;
 
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private LocalDate eventDate;

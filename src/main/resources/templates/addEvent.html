@@ -50,6 +50,14 @@
                th:field="*{eventDate}">
     </p>
 
+    <p>
+        <label for="startTime" class="sr-only">Start Time</label>
+        <label th:if="${#fields.hasErrors('startTime')}" th:errors="*{startTime}"
+               class="validation-message"></label>
+        <input type="text" id="startTime" name="startTime" class="form-control" placeholder="startTime"
+               th:field="*{startTime}">
+    </p>
+
     <div style="display: flex; justify-content: space-between">
         <button class="btn btn-lg btn-primary" name="submit" value="add" type="submit"
         >
