@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.Iterator;
 
 @Controller
 public class EventController {
